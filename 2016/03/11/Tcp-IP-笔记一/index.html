@@ -17,7 +17,7 @@
 <!--<![endif]-->
 
 <head>
-  <title>影响长连接的主要因素 | eaglelin</title>
+  <title>Tcp/IP 笔记一 | eaglelin</title>
   <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -226,53 +226,39 @@
         <div class="row col-md-offset-2">
             <div class="col-md-8">
     			<span class="post-meta">
-      <time datetime="2016-03-09T06:24:05.000Z" itemprop="datePublished">
-          2016-03-09
+      <time datetime="2016-03-11T06:08:28.000Z" itemprop="datePublished">
+          2016-03-11
       </time>
     
 </span>
-                <h1>影响长连接的主要因素</h1>
+                <h1>Tcp/IP 笔记一</h1>
             </div>
         </div>
         <div class="col-md-8 col-md-offset-2">
-      		<p><strong>tcp/ip是个协议组，可以分为网络层、传输层、应用层</strong></p>
-<ol>
-<li>在网络层有ip协议，icmp协议，arp协议,Rarp协议，bootp协议</li>
-<li>在传输层有tcp和udp协议</li>
-<li>在应用层有ftp、http、等等的协议<br><img src="http://blog.chinaunix.net/attachment/201211/1/9622484_1351732533Vvlb.gif" alt="tcp icon"></li>
+      		<h3 id="TCP-IP由osi七层协议简化而来"><a href="#TCP-IP由osi七层协议简化而来" class="headerlink" title="TCP/IP由osi七层协议简化而来"></a>TCP/IP由osi七层协议简化而来</h3><p><img src="/img/osi_tcpip.png" alt="icon1"></p>
+<h3 id="tcp-ip的运作流程（以访问网站来说明）"><a href="#tcp-ip的运作流程（以访问网站来说明）" class="headerlink" title="tcp/ip的运作流程（以访问网站来说明）"></a>tcp/ip的运作流程（以访问网站来说明）</h3><ol>
+<li>应用程序阶段：打开浏览器，输入url，浏览器就会把url包成一个数据，并向下传给tcp/ip的应用层</li>
+<li>应用层：由应用层提供的http协议将浏览器的数据包起来，并给以一个应用层的表头（<em>表明是应用层</em>） 向传送层；</li>
+<li>传送层：由于为可靠联机，因此将数据丢入Tcp封包中，并给予一个tcp封包的表头，丢向网络层；</li>
+<li>网络层：将tcp包裹包进IP封包内，在给予一个ip表头（<em>主要就是来源与目标的ip</em>），丢向链路层</li>
+<li>链路层：如果使用以太网，此时ip会依据CSMA/CD 的标准，包裹到mac讯框中，并给予mac表头，在转成位串后（0，1），利用传输媒体传送到远程主机上</li>
 </ol>
-<p>总图中可以看出，所有的网络通信其实底层都是通过socket进行通信的。</p>
-<h3 id="长连接和断连接"><a href="#长连接和断连接" class="headerlink" title="长连接和断连接"></a>长连接和断连接</h3><h4 id="短连接："><a href="#短连接：" class="headerlink" title="短连接："></a>短连接：</h4><p>连接-&gt;传输数据-&gt;关闭连接</p>
-<p>HTTP是无状态的，浏览器和服务器每进行一次HTTP操作，就建立一次连接，但任务结束就中断连接。也可以这样说：短连接是指SOCKET连接后发送后接收完数据后马上断开连接</p>
-<h4 id="长连接："><a href="#长连接：" class="headerlink" title="长连接："></a>长连接：</h4><p>连接-&gt;传输数据-&gt;保持连接 -&gt; 传输数据-&gt; 。。。 -&gt;关闭连接。<br>长连接指建立SOCKET连接后不管是否使用都保持连接，但安全性较差，HTTP也可以建立长连接的，使用Connection:keep-alive，HTTP 1.1默认进行持久连接</p>
-<h3 id="长连接的影响因素"><a href="#长连接的影响因素" class="headerlink" title="长连接的影响因素"></a>长连接的影响因素</h3><p><strong>tcp连接在默认的情况下就是所谓的长连接，也就是说双方不主动关闭连接，这个连接就应该一直存在，但是网络中的情况是复杂的，这个连接可能会被切断，比如客户端到服务器的链路断开了，或者服务器宕机了，或者没有网络等；作为开放者主要关注以下的因素</strong></p>
-<h4 id="1-NAT超时"><a href="#1-NAT超时" class="headerlink" title="1.NAT超时"></a>1.NAT超时</h4><p>因为ipv4的ip量有限，运营商分配给手机终端的ip是运营商的内网ip，手机要连接internet，就需要通过运营商的网关做一个网络地址转换（network address translation NAT），大部分的无线网络运营商都会在链路一段时间没有数据通讯是，淘汰NAT表中国对应项，造成链路中断</p>
-<p><strong>心跳包:</strong>为了保持长连接就必须发送一心跳，而且心跳的间隔必须要小于NAT超时时间(aging-time)，如果超过aging-time不做心跳，TCP长连接链路就会中断，Server就无法发送Push给手机，只能等到客户端下次心跳失败后，重建连接才能取到消息</p>
-<pre><code>注意点：心跳包和轮询看起来类似，都是客户端主动联系服务器，但是区别很大
-1. 轮询是为了获取数据，而心跳是为了保持tcp长连接
-2. 轮询越频繁，获取的数据就也及时，心跳的频繁与否和数据是否及时没有直接关系
-3. 轮询比心跳能耗更高，因为一次轮询需要经过tcp三次握手，四次挥手，单次心跳不需要建立和拆除tcp连接
-</code></pre><h4 id="2-DHCP的租期（lease-time）"><a href="#2-DHCP的租期（lease-time）" class="headerlink" title="2.DHCP的租期（lease time）"></a>2.DHCP的租期（lease time）</h4><p><strong>目前测试发现安卓系统对DHCP的处理有Bug，DHCP租期到了不会主动续约并且会继续使用过期IP，这个问题会造成TCP长连接偶然的断连。</strong></p>
-<h4 id="3、网络状态变化"><a href="#3、网络状态变化" class="headerlink" title="3、网络状态变化"></a>3、网络状态变化</h4><p><strong>手机网络和WIFI网络切换、网络断开和连上等情况有网络状态的变化，也会使长连接变为无效连接，需要监听响应的网络状态变化事件，重新建立Push长连接。</strong></p>
-
+<p><code>网络层以下的数据主要是操作系统提供的，因此，我们又将tcp/ip当中的应用层视为使用者层，而低下的三层才是网络基础</code></p>
+<h3 id="TCP-IP的链路层相关协议"><a href="#TCP-IP的链路层相关协议" class="headerlink" title="TCP/IP的链路层相关协议"></a>TCP/IP的链路层相关协议</h3>
             <div class="clearfix"></div>
             <hr class="nogutter">
         </div>
         <nav class="pagination" role="pagination">
     
-    <a class="pull-left" href="/2016/03/09/arp与dhcp/" style="float: left;">
-        ← arp与dhcp
-    </a>
     
-    
-    <a class="pull-right" href="/2016/03/09/hello-world/">
-        Hello World →
+    <a class="pull-right" href="/2016/03/09/android/">
+        android →
     </a>
     
 </nav>
 
         <div class="duoshuo">
-<div class="ds-thread" data-thread-key="2016/03/09/tcp:ip_小结/" data-title="影响长连接的主要因素" data-url="http://yoursite.com/2016/03/09/tcp:ip_小结/"></div>
+<div class="ds-thread" data-thread-key="2016/03/11/Tcp-IP-笔记一/" data-title="Tcp/IP 笔记一" data-url="http://yoursite.com/2016/03/11/Tcp-IP-笔记一/"></div>
 <script type="text/javascript">
 var duoshuoQuery = {short_name:"duoshuo_name"};
 (function() {
