@@ -228,6 +228,78 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2 opening-statement">
                 <div class="col-md-4">
+                    <h3><a href="/2016/03/17/hello-ffmpeg/">hello_ffmpeg</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2016-03-17T09:29:58.000Z" itemprop="datePublished">
+          2016-03-17
+      </time>
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        通过初识ffmpeg中已经得到了如下的文件了
+
+下面就协议helloffmpeg的程序调用所生成libffmpeg.so的方法
+大体思路：
+
+需编译一个so文件，这个so文件是jni方法，可以由java层调用，而这些jni方法里用到的函数就是libffmpeg.so具体操作如下:
+将生成的libffmpeg.so复制到ndk目录下的platforms/android-5/arch-arm/usr/lib下，因为调用ndk-build的时
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2016/03/17/hello-ffmpeg/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2016/03/17/android-mk文件详解/">android.mk文件详解</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2016-03-17T07:27:51.000Z" itemprop="datePublished">
+          2016-03-17
+      </time>
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        Android.mk文件用来向编译系统描述如何编译你的源代码，就是小型的makefile。会被ndk编译工具解析对次，因此应该尽量减少源码中声明变量。每个模块属于下列的类型之一
+
+apk程序，一般的android程序，编译打包成apk文件
+java库，编译打包成jar包文件
+C\C++应用程序，可执行的c/c++应用程序
+C\C++静态库，编译c/c++静态库，并打包成.a文件
+C\C++动态库，编译生成.so文件，有且只有.so文件才
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2016/03/17/android-mk文件详解/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
                     <h3><a href="/2016/03/15/初识ffmpeg/">初识ffmpeg</a></h3>
                     <span>
                         <span class="post-meta">
@@ -296,38 +368,6 @@ tcp/ip的运作流程（以访问网站来说明）
         <div class="row">
             <div class="col-md-8 col-md-offset-2 opening-statement">
                 <div class="col-md-4">
-                    <h3><a href="/2016/03/09/arp与dhcp/">arp与dhcp</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2016-03-09T06:24:05.000Z" itemprop="datePublished">
-          2016-03-09
-      </time>
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        arp：地址解析协议，根据ip获取主机的物理mac地址。arp缓存的本质就是ip—mac地址的对应表。DHCP服务：前身是bootp,他提供了一种动态指定ip地址和配置参数的机制;DHCP使得ip地址租用，对于许多拥有多台计算机的大型网络来说，每台计算机拥有一个ip地址有时候可能是不必要的，租期是1分钟到一百年不定，当租期到了的时候，服务器可以吧这个ip地址分配给别的机器使用
-简单说明一下dhcp的工作过程：第一次登录的时候﹕
-1.寻找
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2016/03/09/arp与dhcp/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
                     <h3><a href="/2016/03/09/android/">android</a></h3>
                     <span>
                         <span class="post-meta">
@@ -354,6 +394,38 @@ javah -jni com.eagle.hellojni.JniUtils
                     
                     <p class="pull-right readMore">
                         <a href="/2016/03/09/android/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2016/03/09/arp与dhcp/">arp与dhcp</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2016-03-09T06:24:05.000Z" itemprop="datePublished">
+          2016-03-09
+      </time>
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        arp：地址解析协议，根据ip获取主机的物理mac地址。arp缓存的本质就是ip—mac地址的对应表。DHCP服务：前身是bootp,他提供了一种动态指定ip地址和配置参数的机制;DHCP使得ip地址租用，对于许多拥有多台计算机的大型网络来说，每台计算机拥有一个ip地址有时候可能是不必要的，租期是1分钟到一百年不定，当租期到了的时候，服务器可以吧这个ip地址分配给别的机器使用
+简单说明一下dhcp的工作过程：第一次登录的时候﹕
+1.寻找
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2016/03/09/arp与dhcp/">Read More...</a>
                     </p>
                     
                 </div>

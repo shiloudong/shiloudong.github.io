@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<!--[if lte IE 8 ]>
+<html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<!--
+***************  *      *     *
+      8          *    *       *
+      8          *  *         *
+      8          **           *
+      8          *  *         *
+      8          *    *       *
+      8          *      *     *
+      8          *        *   ***********    -----Theme By Kieran(http://go.kieran.top)
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<!--<![endif]-->
+
+<head>
+  <title>hello_ffmpeg | eaglelin</title>
+  <!-- Meta data -->
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="eaglelin">
+    <meta name="author" content="eaglelin">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <!-- Favicon, (keep icon in root folder) -->
+    <link rel="Shortcut Icon" href="/img/favicon.ico" type="image/ico">
+
+    <link rel="alternate" href="/atom.xml" title="eaglelin" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/all.css" media="screen" type="text/css">
+	
+    <link rel="stylesheet" href="/highlightjs/vs.css" type="text/css">
+    
+    
+
+    <!-- Custom stylesheet, (add custom styles here, always load last) -->
+    <!-- Load our stylesheet for IE8 -->
+    <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="/css/ie8.css" />
+    <![endif]-->
+
+    <!-- Google Webfonts (Monserrat 400/700, Open Sans 400/600) -->
+    <link href='//fonts.useso.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link href='//fonts.useso.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
+
+    <!-- Load our fonts individually if IE8+, to avoid faux bold & italic rendering -->
+    <!--[if IE]>
+    <link href='http://fonts.useso.com/css?family=Montserrat:400' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Montserrat:700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Open+Sans:400' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Open+Sans:600' rel='stylesheet' type='text/css'>
+    <![endif]-->
+
+    <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
+    <script src="/js/jquery-1.11.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
+
+    <!-- Load these in the <head> for quicker IE8+ load times -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5shiv.min.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  <style>.col-md-8.col-md-offset-2.opening-statement img{display:none;}</style>
+</head>
+
+<!--
+<body class="post-template">
+-->
+<body id="index" class="lightnav animsition">
+
+      <!-- ============================ Off-canvas navigation =========================== -->
+
+    <div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
+        <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
+            <img src="/img/close.png" alt="Close"/>
+        </div>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu">
+            <li><a href="/" class="animsition-link" title="Home">Home</a></li>
+            <li><a href="/archives" class="animsition-link" title="archive">archives</a></li>
+            <!-- Dropdown Menu -->
+			 
+            <li>
+                <a class="sb-toggle-submenu">Works<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                        <li><a href="/" target="_BLANK" class="animsition-link">AAA</a></li>
+                    
+                        <li><a href="/atom.xml" target="_BLANK" class="animsition-link">BBB</a></li>
+                    
+                </ul>
+            </li>
+            
+            
+            
+            <li>
+                <a class="sb-toggle-submenu">Links<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                    <li><a href="http://go.kieran.top/" class="animsition-link">Kieran</a></li>
+                    
+                    <li><a href="http://domain.com/" class="animsition-link">Name</a></li>
+                    
+                </ul>
+            </li>
+            
+        </ul>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu secondary">
+            <li><a href="/about.html" class="animsition-link" title="about">About</a></li>
+            <li><a href="/atom.xml" class="animsition-link" title="rss">RSS</a></li>
+        </ul>
+    </div>
+    
+    <!-- ============================ END Off-canvas navigation =========================== -->
+
+    <!-- ============================ #sb-site Main Page Wrapper =========================== -->
+
+    <div id="sb-site">
+        <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+        <div id="navigation" class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <!-- Nav logo -->
+                    <div class="logo">
+                        <a href="/" title="Logo" class="animsition-link">
+                         <img src="/img/logo.png" alt="Logo" width="35px;"/> 
+                        </a>
+                    </div>
+                    <!-- // Nav logo -->
+                    <!-- Info-bar -->
+                    <nav>
+                        <ul class="nav">
+                            <li><a href="/" class="animsition-link">eaglelin</a></li>
+                            <li class="nolink"><span>Always </span>Creative.</li>
+                            
+                            <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a></li>
+                            
+                            
+                            <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a></li>
+                            
+                            
+                            <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a></li>
+                            
+                            
+                            <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a></li>
+                            
+                            
+                            <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a></li>
+                            
+                            <li class="nolink"><span>Welcome!</span></li>
+                        </ul>
+                    </nav>
+                    <!--// Info-bar -->
+                </div>
+                <!-- // .container -->
+                <div class="learnmore sb-toggle-right">More</div>
+                <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="More">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar before"></span>
+                <span class="icon-bar main"></span>
+                <span class="icon-bar after"></span>
+                </button>
+            </div>
+            <!-- // .navbar-inner -->
+        </div>
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+        <!-- ============================ Hero Image =========================== -->
+
+        <section id="hero" class="scrollme">
+            <div class="container-fluid element-img" style="background: url(/img/bg_img.jpg) no-repeat center center fixed;background-size: cover">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 vertical-align cover boost text-center">
+                        <div class="center-me animateme" data-when="exit" data-from="0" data-to="0.6" data-opacity="0" data-translatey="100">
+                            <div>
+                            	
+                                <h2>FOOL.HUNGRY</h2>
+                                <p></p>
+				    			
+                                <h2></h2>
+                                <p>未觉池塘春草梦，阶前梧叶已秋声</p>
+				    			
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- // .col-md-12 -->
+                </div>
+                <div class="herofade beige-dk"></div>
+            </div>
+        </section>
+
+        <!-- Height spacing helper -->
+        <div class="heightblock"></div>
+        <!-- // End height spacing helper -->
+
+        <!-- ============================ END Hero Image =========================== -->
+      
+<section id="intro">
+    <div class="container">
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2016-03-17T09:29:58.000Z" itemprop="datePublished">
+          2016-03-17
+      </time>
+    
+</span>
+                <h1>hello_ffmpeg</h1>
+            </div>
+        </div>
+        <div class="col-md-8 col-md-offset-2">
+      		<p><strong>通过初识ffmpeg中已经得到了如下的文件了</strong></p>
+<p><img src="/img/ffpemg_init.png" alt="image"></p>
+<p>下面就协议helloffmpeg的程序调用所生成<code>libffmpeg.so</code>的方法</p>
+<p><strong>大体思路：</strong></p>
+<p><img src="http://img.blog.csdn.net/20150722205737840" alt="image"></p>
+<h3 id="需编译一个so文件，这个so文件是jni方法，可以由java层调用，而这些jni方法里用到的函数就是libffmpeg-so"><a href="#需编译一个so文件，这个so文件是jni方法，可以由java层调用，而这些jni方法里用到的函数就是libffmpeg-so" class="headerlink" title="需编译一个so文件，这个so文件是jni方法，可以由java层调用，而这些jni方法里用到的函数就是libffmpeg.so"></a>需编译一个so文件，这个so文件是jni方法，可以由java层调用，而这些jni方法里用到的函数就是<code>libffmpeg.so</code></h3><h4 id="具体操作如下"><a href="#具体操作如下" class="headerlink" title="具体操作如下:"></a>具体操作如下:</h4><ol>
+<li><p>将生成的<code>libffmpeg.so</code>复制到ndk目录下的<code>platforms/android-5/arch-arm/usr/lib</code>下，因为调用ndk-build的时候需要用到<br>eg:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/Users/linquandong/Desktop/Android/ndk/android-ndk-r10/platforms/android-L/arch-arm/usr/lib</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>新建项目，并创建jni目录，在jni目录先再创建ffmpeg目录存放生成的<code>.a</code>,和<code>.h</code>头文件</p>
+</li>
+</ol>
+<p><img src="/img/ffpemg_anroid.png" alt="image"></p>
+<ol>
+<li>接着就是编写jni层调用，</li>
+</ol>
+<p><strong>ffmpegUtils_FFmpegPoxy.h文件</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">/* DO NOT EDIT THIS FILE - it is machine generated */</span><br><span class="line">#include &lt;jni.h&gt;</span><br><span class="line">/* Header for class ffmpegUtils_FFmpegPoxy */</span><br><span class="line">#ifndef _Included_ffmpegUtils_FFmpegPoxy</span><br><span class="line">#define _Included_ffmpegUtils_FFmpegPoxy</span><br><span class="line">#ifdef __cplusplus</span><br><span class="line">extern &quot;C&quot; &#123;</span><br><span class="line">#endif</span><br><span class="line">/*</span><br><span class="line"> * Class:     ffmpegUtils_FFmpegPoxy</span><br><span class="line"> * Method:    ffmpegInit</span><br><span class="line"> * Signature: ()Z</span><br><span class="line"> */</span><br><span class="line">JNIEXPORT jboolean JNICALL Java_ffmpegUtils_FFmpegPoxy_ffmpegInit</span><br><span class="line">  (JNIEnv *, jobject);</span><br><span class="line"></span><br><span class="line">/*</span><br><span class="line"> * Class:     ffmpegUtils_FFmpegPoxy</span><br><span class="line"> * Method:    ffmpegUninit</span><br><span class="line"> * Signature: ()Z</span><br><span class="line"> */</span><br><span class="line">JNIEXPORT jboolean JNICALL Java_ffmpegUtils_FFmpegPoxy_ffmpegUninit</span><br><span class="line">  (JNIEnv *, jobject);</span><br><span class="line"></span><br><span class="line">/*</span><br><span class="line"> * Class:     ffmpegUtils_FFmpegPoxy</span><br><span class="line"> * Method:    ffmpegGetAvcodecVersion</span><br><span class="line"> * Signature: ()I</span><br><span class="line"> */</span><br><span class="line">JNIEXPORT jint JNICALL Java_ffmpegUtils_FFmpegPoxy_ffmpegGetAvcodecVersion</span><br><span class="line">  (JNIEnv *, jobject);</span><br><span class="line"></span><br><span class="line">#ifdef __cplusplus</span><br><span class="line">&#125;</span><br><span class="line">#endif</span><br><span class="line">#endif</span><br></pre></td></tr></table></figure>
+<p><strong>ffmpegUtils_FFmpegPorx.hd的实现类</strong>:FFmpegPoxy.c,在这里引用了ffmpeg库的avcodec.h的avcodec_version()方法，查看版本号</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line">/* DO NOT EDIT THIS FILE - it is machine generated */</span><br><span class="line">#include &lt;jni.h&gt;</span><br><span class="line">/* Header for class ffmpegUtils_FFmpegPoxy */</span><br><span class="line">#include &quot;ffmpeg/include/libavcodec/avcodec.h&quot;</span><br><span class="line">#include &quot;ffmpeg/include/libavformat/avformat.h&quot;</span><br><span class="line">#include &quot;ffmpegUtils_FFmpegPoxy.h&quot;</span><br><span class="line"></span><br><span class="line">**//注意上面的include,要对应项目的路径**</span><br><span class="line"></span><br><span class="line">/*</span><br><span class="line"> * Class:     ffmpegUtils_FFmpegPoxy</span><br><span class="line"> * Method:    ffmpegInit</span><br><span class="line"> * Signature: ()Z</span><br><span class="line"> */</span><br><span class="line">JNIEXPORT jboolean JNICALL Java_ffmpegUtils_FFmpegPoxy_ffmpegInit</span><br><span class="line">  (JNIEnv * env, jobject obj)</span><br><span class="line">&#123;</span><br><span class="line">  return 1;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">/*</span><br><span class="line"> * Class:     ffmpegUtils_FFmpegPoxy</span><br><span class="line"> * Method:    ffmpegUninit</span><br><span class="line"> * Signature: ()Z</span><br><span class="line"> */</span><br><span class="line">JNIEXPORT jboolean JNICALL Java_ffmpegUtils_FFmpegPoxy_ffmpegUninit</span><br><span class="line">  (JNIEnv *env, jobject obj)&#123;</span><br><span class="line">  return 1;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">/*</span><br><span class="line"> * Class:     ffmpegUtils_FFmpegPoxy</span><br><span class="line"> * Method:    ffmpegGetAvcodecVersion</span><br><span class="line"> * Signature: ()I</span><br><span class="line"> */</span><br><span class="line">JNIEXPORT jint JNICALL Java_ffmpegUtils_FFmpegPoxy_ffmpegGetAvcodecVersion</span><br><span class="line">  (JNIEnv *env, jobject obj)&#123;</span><br><span class="line">    return avcodec_version();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>###接着最关键的一步：编写android.mk文件</p>
+<p><strong>android.mk 方式一</strong></p>
+<pre><code>LOCAL_PATH := $(call my-dir)  //设置为当前变量
+
+# FFmpeg library
+include $(CLEAR_VARS)    //清空变量
+PATH_TO_FFMPEG_SOURCE:=$(LOCAL_PATH)/ffmpeg  //定义ffmepg源码的路径
+LOCAL_C_INCLUDES += $(PATH_TO_FFMPEG_SOURCE)/include //ffmpeg头文件的路径
+LOCAL_LDLIBS := -lffmpeg 这里就是依赖刚才第一步放到lib下的libffmpeg.so
+LOCAL_MODULE    := ffmpegUtils_FFmpegPoxy
+LOCAL_SRC_FILES := FFmpegPoxy.c
+include $(BUILD_SHARED_LIBRARY)
+</code></pre><p><strong>android.mk 方式二（这种方式更好）</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">LOCAL_PATH := $(call my-dir)</span><br><span class="line"></span><br><span class="line"># FFmpeg library先生成libffmpeg</span><br><span class="line">include $(CLEAR_VARS)</span><br><span class="line">LOCAL_MODULE := ffmpeg</span><br><span class="line">LOCAL_SRC_FILES := libffmpeg.so</span><br><span class="line">include $(PREBUILT_SHARED_LIBRARY)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">include $(CLEAR_VARS)</span><br><span class="line"></span><br><span class="line">LOCAL_MODULE    := ffmpegUtils_FFmpegPoxy</span><br><span class="line">LOCAL_SRC_FILES := FFmpegPoxy.c</span><br><span class="line"></span><br><span class="line">PATH_TO_FFMPEG_SOURCE:=$(LOCAL_PATH)/ffmpeg</span><br><span class="line">LOCAL_C_INCLUDES += $(PATH_TO_FFMPEG_SOURCE)/include</span><br><span class="line">LOCAL_SHARED_LIBRARIES := ffmpeg </span><br><span class="line"></span><br><span class="line">include $(BUILD_SHARED_LIBRARY)</span><br></pre></td></tr></table></figure>
+<p>LOCAL_PATH := $(call my-dir) :makegun,也就是ndk编译系统提供的方法，获取当前路径</p>
+<p>include $(CLEAR_VARS)：CLEAR_VARS由编译i系统提供，指定让GNU MAKEFILE清除除了LOCALPATH变量外的许多LOCAL*变量（例如：LOCAL_MODULE、LOCAL_SRC_FILES等）。这是非常有必要的，因为所有的编译文件都在同一个GUN MKAE执行环境中，所有的变量都是全局变量，不清除容易引起解析错误</p>
+<p>PATH_TO_FFMPEG_SOURCE:=$(LOCAL_PATH)/ffmpeg  //定义ffmepg源码的路径</p>
+<p>LOCAL_C_INCLUDES += $(PATH_TO_FFMPEG_SOURCE)/include //ffmpeg头文件的路径</p>
+<p>LOCAL_LDLIBS := -lffmpeg<br>这行很重要，这是表示你这个so运行的时候依赖于libffmpeg.so这个库， 再举个例子：如果你要编译的so不仅要用到libffmpeg.so这个库还要用的libopencv.so这个库的话，你这个参数就应该写成<br>LOCAL_LDLIBS := -lffmpeg -lopencv</p>
+<p>LOCAL_MODULE := ffmpegUtils_FFmpegPoxy：LOCAL_MODULE变量必须定义，用来标识在Android.mk文件描述的每一个模块。而且名称必须是唯一的，并且不能包含空格。编译系统会自动产生合适的前缀和后缀，比如一个被命名为ffmpegUtils_FFmpegPoxy的共享库模块，将会生成ffmpegUtils_FFmpegPoxy.so文件。</p>
+<p>LOCAL_SRC_FILES := FFmpegPoxy.c：模块中的源代码文件，也就是ffmpegUtils_FFmpegPoxy的实现</p>
+<p>include $(BUILD_SHARED_LIBRARY)：BUILD_SHARED_LIBRARY是编译系统提供的变量，指向一个GNU Makefile脚本（应该就是build/core目录下的shared_library.mk）,负责收集自从上次调用include $(CLEARVARS)以来，定义在LOCAL*变量中的所有信息，并且决定编译什么，如何正确地去做，并根据其规则生成静态库</p>
+
+            <div class="clearfix"></div>
+            <hr class="nogutter">
+        </div>
+        <nav class="pagination" role="pagination">
+    
+    
+    <a class="pull-right" href="/2016/03/17/android-mk文件详解/">
+        android.mk文件详解 →
+    </a>
+    
+</nav>
+
+        <div class="duoshuo">
+<div class="ds-thread" data-thread-key="2016/03/17/hello-ffmpeg/" data-title="hello_ffmpeg" data-url="http://yoursite.com/2016/03/17/hello-ffmpeg/"></div>
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"duoshuo_name"};
+(function() {
+	var ds = document.createElement('script');
+	ds.type = 'text/javascript';ds.async = true;
+	ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+	ds.charset = 'UTF-8';
+	(document.getElementsByTagName('head')[0] 
+	 || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+</script>
+</div>
+    </div>
+</section>
+
+
+      
+<!-- ============================ Footer =========================== -->
+
+<footer>
+    <div class="container">
+            <div class="copy">
+                <p>
+                    &copy; 2014<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By eaglelin. All Rights Reserved.
+                </p>
+                <p>Theme By <a href="//go.kieran.top" style="color: #767D84">Kieran</a></p>
+            </div>
+            <div class="social">
+                <ul>
+                    
+                    <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a>&nbsp;</li>
+                    
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+</footer>
+
+<!-- ============================ END Footer =========================== -->
+      <!-- Load our scripts -->
+        
+<!-- Resizable 'on-demand' full-height hero -->
+<script type="text/javascript">
+    
+    var resizeHero = function () {
+        var hero = $(".cover,.heightblock"),
+            window1 = $(window);
+        hero.css({
+            "height": window1.height()
+        });
+    };
+    
+    resizeHero();
+    
+    $(window).resize(function () {
+        resizeHero();
+    });
+</script>
+<script src="/js/plugins.min.js"></script><!-- Bootstrap core and concatenated plugins always load here -->
+<script src="/js/jquery.flexslider-min.js"></script><!-- Flexslider plugin -->
+<script src="/js/scripts.js"></script><!-- Theme scripts -->
+
+<!-- Initiate flexslider plugin -->
+<script type="text/javascript">
+    $(document).ready(function($) {
+      $('.flexslider').flexslider({
+        animation: "fade",
+        prevText: "",
+        nextText: "",
+        directionNav: true
+      });
+    });
+</script>
+
+</body>
+</html>
